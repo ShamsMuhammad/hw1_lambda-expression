@@ -14,23 +14,32 @@ public class IterateList {
 
         //Please implement Anonymous class to iterate through
         System.out.println("Using Anonymous class");
+        Consumer consumer = new Consumer() {
+            @Override
+            public void accept(Object o) {
 
+            }
+        };
 
 
         //Please implement lambda expression to iterate through electronicsList
         System.out.println("Lambda Expression");
+        electronicsList.forEach(s -> System.out.println(s));
 
 
         //Please implement lambda Method Reference to iterate through electronicsList
         System.out.println("Lambda Method Reference-1");
 
 
+
         //Please implement lambda Method Reference from Electronics class to iterate through electronicsList
         System.out.println("Lambda Method Reference-2 using Electronics class");
+        electronicsList.forEach(st -> Electronics.countWordLength("Length fro Lambda Method Reference-2: " + st));
 
 
         //Please implement stream iteration through electronicsList
         System.out.println("iterate using Stream for each loop");
-        electronicsList.stream().forEach(Electronics-> System.out.println(Electronics));
+        electronicsList.stream()
+                .forEach(Electronics-> System.out.println(Electronics));
     }
 }
