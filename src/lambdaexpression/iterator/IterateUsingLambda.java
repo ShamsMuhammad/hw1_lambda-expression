@@ -18,6 +18,9 @@ public class IterateUsingLambda {
 		 }
 
         // Please Implement Lambda Iteration on itemPrice map
+        System.out.println("##################   Lambda Iteration   ###############");
+        itemPrice.forEach((itemName, price) -> System.out.println("Item Name: "+ itemName + " and Item Price: $" + price ));
+
 
     }
 }
