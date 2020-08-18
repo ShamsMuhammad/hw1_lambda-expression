@@ -31,5 +31,6 @@ public class IterateList {
 
         //Please implement stream iteration through electronicsList
         System.out.println("iterate using Stream for each loop");
+        electronicsList.stream().forEach(Electronics-> System.out.println(Electronics));
     }
 }
