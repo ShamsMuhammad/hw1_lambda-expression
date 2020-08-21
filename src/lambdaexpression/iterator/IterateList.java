@@ -29,13 +29,13 @@ public class IterateList {
 
         //Please implement lambda Method Reference to iterate through electronicsList
         System.out.println("Lambda Method Reference-1");
-
+        electronicsList.forEach(System.out::println);
 
 
         //Please implement lambda Method Reference from Electronics class to iterate through electronicsList
         System.out.println("Lambda Method Reference-2 using Electronics class");
-        electronicsList.forEach(st -> Electronics.countWordLength("Length fro Lambda Method Reference-2: " + st));
-
+        //electronicsList.forEach(st -> Electronics.countWordLength("Length fro Lambda Method Reference-2: " + st));
+        electronicsList.forEach(Electronics::countWordLength);
 
         //Please implement stream iteration through electronicsList
         System.out.println("iterate using Stream for each loop");
